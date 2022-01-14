@@ -16,7 +16,7 @@ class PostData {
 		$this->content = "";
 		$this->image = "";
 		$this->theme_id = "";
-				$this->user_id = "";
+		$this->user_id = "";
 		$this->is_public = "0";
 		$this->created_at = "NOW()";
 	}
