@@ -40,6 +40,7 @@
 							<th>Enviado Por</th>
 							<th>Transportado Por</th>
 							<th>Recibido Por</th>
+							<th>Operaciones</th>
 							<th></th>
 						</tr>
 					</thead>
@@ -51,22 +52,20 @@
 						foreach ($detalles as $key => $value) {
 						?>
 							<tr>
-								<td><?php echo $value->id; ?></td>
 								<td><?php echo $value->fecha; ?></td>
-								<td></td>
 								<td><?php echo $value->de; ?></td>
-								<td></td>
 								<td><?php echo $value->para; ?></td>
-								<td></td>
 								<td><?php echo $value->observaciones; ?></td>
-								<td></td>
 								<td><?php echo $value->enviado_firma; ?></td>
-								<td></td>
 								<td><?php echo $value->transportado_firma; ?></td>
-								<td></td>
 								<td><?php echo $value->recibido_firma; ?></td>
-								<td></td>
+
+								<td style="width:130px;">
+								<a href="" class="btn btn-warning btn-xs">Editar</a>
+								<a href="" class="btn btn-danger btn-xs">Eliminar</a>
+								
 							</tr>
+							
 						<?php
 						}
 						?>
