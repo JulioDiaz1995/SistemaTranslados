@@ -1,7 +1,7 @@
 <?php
 class ProductData {
 	public static $tablename = "product";
-	public static $tablename2 = "remision";
+	public static $remision = "remision";
 
 	public function ProductData(){
 		$this->name = "";
@@ -35,7 +35,7 @@ class ProductData {
 
 	// metodo para obtener datos de remisiones del historial
 	public static function producto_remisiones2(){
-		$sql = "select * from ".self::$tablename2." where unit>0";
+		$sql = "select * from ".self::$remision." where unit>0";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new ProductData());
 	}
