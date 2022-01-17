@@ -21,6 +21,15 @@ class ProductData {
 		return Model::many($query[0],new ProductData());
 	}
 
+
+	public static function producto_detalles_remisiones(){
+		$sql = "SELECT product.*,detalle_remision.id AS id_detalle,detalle_remision.cantidad
+					FROM detalle_remision,product 
+					WHERE product.id = detalle_remision.id_producto and id_remision = 0";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new ProductData());
+	}
+
 	public function add(){
 		$sql = "insert into ".self::$tablename." (barcode,name,description,price_in,price_out,user_id,presentation,unit,category_id,inventary_min,created_at) ";
 		$sql .= "value (\"$this->barcode\",\"$this->name\",\"$this->description\",\"$this->price_in\",\"$this->price_out\",$this->user_id,\"$this->presentation\",\"$this->unit\",$this->category_id,$this->inventary_min,NOW())";
