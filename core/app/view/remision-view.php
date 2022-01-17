@@ -36,8 +36,8 @@
 			<p> <span style="padding: 10px;"> <b>Fecha: </b> </span><input type="date" style="width: 190px;height: 30px;"></p>
 
 
-			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>DE: </b> </span> <input style="width: 190px;height: 30px;"> </p>
-			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>PARA: </b> </span> <input style="width: 190px;height: 30px;">  </p>
+			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>De: </b> </span> <input style="width: 190px;height: 30px;"> </p>
+			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>Para: </b> </span> <input style="width: 190px;height: 30px;">  </p>
 
 			<br></br>
 

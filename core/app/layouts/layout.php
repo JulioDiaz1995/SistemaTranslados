@@ -108,14 +108,17 @@
           <ul class="sidebar-menu">
             <li class="header">ADMINISTRACION</li>
             <?php if (isset($_SESSION["user_id"])) : ?>
+
               <li><a href="./index.php?view=home"><i class='fa fa-home'></i> <span>Inicio</span></a></li>
+              
               <li class="treeview">
                 <a href="#"><i class='fa fa-send'></i><span>Traslados</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                   <li><a href="./?view=remision">Crear</a></li>
-                  <li><a href="#">Historial</a></li>
+                  <li><a href="./?view=historial2">Historial</a></li>
                 </ul>
               </li>
+
               <li><a href="./?view=sells"><i class='fa fa-shopping-cart'></i> <span>Resumen Traslados</span></a></li>
               <li><a href="./?view=products"><i class='fa fa-glass'></i> <span>Productos</span></a></li>
 
@@ -136,6 +139,7 @@
                   <li><a href="./?view=res">Abastecimientos</a></li>
                 </ul>
               </li>
+
               <li class="treeview">
                 <a href="#"><i class='fa fa-file-text-o'></i> <span>Reportes</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
@@ -152,6 +156,7 @@
 
                 </ul>
               </li>
+
             <?php endif; ?>
 
           </ul><!-- /.sidebar-menu -->

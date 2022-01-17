@@ -1,6 +1,7 @@
 <?php
 class ProductData {
 	public static $tablename = "product";
+	public static $tablename2 = "remision";
 
 	public function ProductData(){
 		$this->name = "";
@@ -9,6 +10,17 @@ class ProductData {
 		$this->unit = "";
 		$this->user_id = "";
 		$this->presentation = "0";
+		$this->created_at = "NOW()";
+	}
+
+	public function ProductData2(){
+		$this->fecha = "";
+		$this->de= "";
+		$this->para = "";
+		$this->Observaciones = "";
+		$this->enviado_firma = "";
+		$this->transportado_firma = "";
+		$this->recibido_firma = "";
 		$this->created_at = "NOW()";
 	}
 
@@ -21,6 +33,12 @@ class ProductData {
 		return Model::many($query[0],new ProductData());
 	}
 
+	// metodo para obtener datos de remisiones del historial
+	public static function producto_remisiones2(){
+		$sql = "select * from ".self::$tablename2." where unit>0";
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new ProductData());
+	}
 
 	public static function producto_detalles_remisiones(){
 		$sql = "SELECT product.*,detalle_remision.id AS id_detalle,detalle_remision.cantidad
