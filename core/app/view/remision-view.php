@@ -33,13 +33,13 @@
 
 		<form action="./?view=add_remision" method="post">
 
-			<p> <span style="padding: 10px;"> <b>Fecha: </b> </span><input require type="date" id="fecha_r" name="fecha_r" style="width: 190px;height: 30px;"></p>
-			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>De: </b> </span> <input require id="de_r" name="de_r" style="width: 190px;height: 30px;"> </p>
-			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>Para: </b> </span> <input require id="para_r" name="para_r" style="width: 190px;height: 30px;">  </p>
+			<p> <span style="padding: 10px;"> <b>Fecha: </b> </span><input type="date" id="fecha_r" name="fecha_r" style="width: 190px;height: 30px;" require> </p>
+			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>De: </b> </span> <input id="de_r" name="de_r" style="width: 190px;height: 30px;" require> </p>
+			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>Para: </b> </span> <input id="para_r" name="para_r" style="width: 190px;height: 30px;" require>  </p>
 		<br>
 			<div class="clearfix">
 				<button type="submit">
-					<i class='fa fa-th-list'></i>Guardar E Imprimir: </button>
+					<i class='fa fa-th-list'></i>Guardar </button>
 			</div>
 
 			<div class="row">

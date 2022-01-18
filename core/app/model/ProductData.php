@@ -2,6 +2,7 @@
 class ProductData {
 	public static $tablename = "product";
 	public static $remision = "remision";
+	public static $detalle_remision = "detalle_remision";
 
 	public function ProductData(){
 		$this->name = "";
@@ -41,7 +42,7 @@ class ProductData {
 	}
 
 	public static function ultima_remision(){
-		$sql = "select * from ".self::$remision;
+		$sql = "select * from ".self::$remision." where id= (select max(id)from ".self::$remision." )";
 		$query = Executor::doit($sql);
 		return Model::many($query[0],new ProductData());
 	}
@@ -70,8 +71,16 @@ class ProductData {
 		$sql = "delete from ".self::$tablename." where id=$id";
 		Executor::doit($sql);
 	}
+
 	public function del(){
 		$sql = "delete from ".self::$tablename." where id=$this->id";
+		Executor::doit($sql);
+	}
+
+	public static function borrarRemisiones($id){
+		$sql = "delete from ".self::$remision." where id=".$id;
+		Executor::doit($sql);
+		$sql = "delete from ".self::$detalle_remision." where id_remision=".$id;
 		Executor::doit($sql);
 	}
 
@@ -95,7 +104,6 @@ class ProductData {
 		$sql = "select * from ".self::$tablename." where id=$id";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new ProductData());
-
 	}
 
 	public static function getAll(){

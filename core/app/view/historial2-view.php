@@ -59,8 +59,8 @@
 								<td><?php echo $value->recibido_firma; ?></td>
 
 								<td style="width:130px;">
-								<a href="" class="btn btn-warning btn-xs">Editar</a>
-								<a href="" class="btn btn-danger btn-xs">Eliminar</a>
+								
+								<a onclick="eliminar(<?php echo $value->id; ?>)" href="#"  <?php echo 'index.php?view=delremision&id='.$value->id; ?>  class="btn btn-danger btn-xs">Eliminar</a>
 								
 							</tr>
 							
@@ -91,6 +91,19 @@
 				dropdownParent: $('#exampleModal')
 			});
 		});
+
+		function eliminar(id)
+		{
+			var opcion = confirm("Desea eliminar esta remision?");
+				if (opcion == true) {
+					window.location = 'index.php?view=delremision&id='+id;
+				} else {
+					
+				}
+		}
+
+
+
 	</script> 
 	<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
