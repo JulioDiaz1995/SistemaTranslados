@@ -40,6 +40,12 @@ class ProductData {
 		return Model::many($query[0],new ProductData());
 	}
 
+	public static function ultima_remision(){
+		$sql = "select * from ".self::$remision;
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new ProductData());
+	}
+
 	public static function producto_detalles_remisiones(){
 		$sql = "SELECT product.*,detalle_remision.id AS id_detalle,detalle_remision.cantidad
 					FROM detalle_remision,product 

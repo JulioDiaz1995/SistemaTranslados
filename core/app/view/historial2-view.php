@@ -27,8 +27,6 @@
 
 		<form action="">
 
-			<br></br>
-
 				<br>
 				<table class="table table-bordered table-hover">
 					<thead>
@@ -41,7 +39,7 @@
 							<th>Transportado Por</th>
 							<th>Recibido Por</th>
 							<th>Operaciones</th>
-							<th></th>
+							
 						</tr>
 					</thead>
 					

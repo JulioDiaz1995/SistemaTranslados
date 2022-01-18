@@ -31,14 +31,14 @@
 		</h3>
 		<br>
 
-		<form action="">
+		<form action="./?view=add_remision" method="post">
 
-			<p> <span style="padding: 10px;"> <b>Fecha: </b> </span><input type="date" style="width: 190px;height: 30px;"></p>
-			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>De: </b> </span> <input style="width: 190px;height: 30px;"> </p>
-			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>Para: </b> </span> <input style="width: 190px;height: 30px;">  </p>
+			<p> <span style="padding: 10px;"> <b>Fecha: </b> </span><input require type="date" id="fecha_r" name="fecha_r" style="width: 190px;height: 30px;"></p>
+			<p> <span style="padding-right: 30px; padding-left: 10px;"> <b>De: </b> </span> <input require id="de_r" name="de_r" style="width: 190px;height: 30px;"> </p>
+			<p> <span style="padding-right: 16px; padding-left: 10px;"> <b>Para: </b> </span> <input require id="para_r" name="para_r" style="width: 190px;height: 30px;">  </p>
 		<br>
 			<div class="clearfix">
-				<button type="button">
+				<button type="submit">
 					<i class='fa fa-th-list'></i>Guardar E Imprimir: </button>
 			</div>
 
@@ -95,7 +95,7 @@
 				<div class="col-sm-1">
 					<p><b>Observaciones:</b></p>
 				</div>
-				<div class="col-sm-11"> <textarea style="width: 100%;height:80px"></textarea> </div>
+				<div class="col-sm-11"> <textarea style="width: 100%;height:80px" id="observaciones_r" name="observaciones_r"></textarea> </div>
 
 			</div>
 
