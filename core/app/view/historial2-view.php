@@ -61,7 +61,9 @@
 								<td style="width:130px;">
 								
 								<a onclick="eliminar(<?php echo $value->id; ?>)" href="#"  <?php echo 'index.php?view=delremision&id='.$value->id; ?>  class="btn btn-danger btn-xs">Eliminar</a>
+								<a onclick="verhistorial(<?php echo $value->id; ?>)" href="#" class="btn btn-success btn-xs">Ver</a>
 								
+
 							</tr>
 							
 						<?php
@@ -100,6 +102,13 @@
 				} else {
 					
 				}
+		}
+
+		function verhistorial(id)
+		{
+			
+					window.location = 'index.php?view=remisionexportar&id='+id;
+				
 		}
 
 

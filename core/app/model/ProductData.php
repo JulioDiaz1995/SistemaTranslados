@@ -41,6 +41,14 @@ class ProductData {
 		return Model::many($query[0],new ProductData());
 	}
 
+	public static function detalle_historial_remisiones($id){
+		$sql = "SELECT product.*,detalle_remision.id AS id_detalle,detalle_remision.cantidad
+		FROM detalle_remision,product 
+		WHERE product.id = detalle_remision.id_producto and id_remision =".$id;
+		$query = Executor::doit($sql);
+		return Model::many($query[0],new ProductData());
+	}
+
 	public static function ultima_remision(){
 		$sql = "select * from ".self::$remision." where id= (select max(id)from ".self::$remision." )";
 		$query = Executor::doit($sql);
@@ -102,6 +110,12 @@ class ProductData {
 
 	public static function getById($id){
 		$sql = "select * from ".self::$tablename." where id=$id";
+		$query = Executor::doit($sql);
+		return Model::one($query[0],new ProductData());
+	}
+
+	public static function getByIdRemision($id){
+		$sql = "select * from ".self::$remision." where id=$id";
 		$query = Executor::doit($sql);
 		return Model::one($query[0],new ProductData());
 	}

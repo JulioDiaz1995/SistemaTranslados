@@ -116,6 +116,7 @@
                 <ul class="treeview-menu">
                   <li><a href="./?view=remision">Crear</a></li>
                   <li><a href="./?view=historial2">Historial</a></li>
+                  
                 </ul>
               </li>
 
