@@ -7,6 +7,8 @@
 		 // instantiate and use the dompdf class
 		 $dompdf = new Dompdf();
 		 $remision = ProductData::getByIdRemision($_GET["id"]);
+
+		 $html = '<h1>master/index.php?view=remisionexportar&id=2</h1>';
 	
 		 $dompdf->loadHtml("<h1>vvv</h1>");
 		 

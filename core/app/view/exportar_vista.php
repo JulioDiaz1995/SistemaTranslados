@@ -1,7 +1,7 @@
 <div class="col-md-12">
         <nav aria-label="...">
             <ul class="pager">
-                <li class="previous"><button onclick="window.location = './?view=historial2'">Regresar</button></li>
+                <li class="primary"><button onclick="window.location = './?view=historial2'">Regresar</button></li>
                 <li class="next"><button onclick="window.location = './?view=exportar_remision&id=<?php echo $_GET["id"]; ?>'">IMPRIMIR</button></li>
             </ul>
         </nav>
