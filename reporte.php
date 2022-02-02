@@ -1,7 +1,9 @@
 <?php
 
-require "conexion.php";
+
 require "fpdf/fpdf.php";
+include 'plantilla.php';
+require 'conexion.php';
 
 $pdf = new FPDF("P","mm", "letter") ;
 $pdf->AddPage();
